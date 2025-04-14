@@ -1,10 +1,6 @@
 # Image Super-Resolution (ISR)
 
-<img src="figures/butterfly.png">
 
-[![Build Status](https://travis-ci.org/idealo/image-super-resolution.svg?branch=master)](https://travis-ci.org/idealo/image-super-resolution)
-[![Docs](https://img.shields.io/badge/docs-online-brightgreen)](https://idealo.github.io/image-super-resolution/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://github.com/idealo/image-super-resolution/blob/master/LICENSE)
 
 The goal of this project is to upscale and improve the quality of low resolution images.
 
