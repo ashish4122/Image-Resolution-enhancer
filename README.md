@@ -1,4 +1,4 @@
-# Image Super-Resolution (ISR)
+# Image Resolution Enhancer
 
 
 
