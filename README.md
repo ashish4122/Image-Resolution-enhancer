@@ -61,50 +61,6 @@ pip install 'h5py==2.10.0' --force-reinstall
 ```
 [Issue](https://github.com/idealo/image-super-resolution/issues/197#issue-877826405)
 
-## Pre-trained networks
-
-The weights used to produced these images are available directly when creating the model object. 
-
-Currently 4 models are available:
-  - RDN: psnr-large, psnr-small, noise-cancel
-  - RRDN: gans
- 
-Example usage:
-
-```
-model = RRDN(weights='gans')
-```
-  
-The network parameters will be automatically chosen.
-(see [Additional Information](#additional-information)).
-
-#### Basic model
-RDN model, PSNR driven, choose the option ```weights='psnr-large'``` or ```weights='psnr-small'``` when creating a RDN model.
-
-|![butterfly-sample](figures/butterfly_comparison_SR_baseline.png)|
-|:--:|
-| Low resolution image (left), ISR output (center), bicubic scaling (right). Click to zoom. |
-#### GANS model
-RRDN model, trained with Adversarial and VGG features losses, choose the option ```weights='gans'``` when creating a RRDN model.
-
-|![baboon-comparison](figures/baboon-compare.png)|
-|:--:|
-| RRDN GANS model (left), bicubic upscaling (right). |
--> [more detailed comparison](http://www.framecompare.com/screenshotcomparison/PGZPNNNX)
-
-#### Artefact Cancelling GANS model
-RDN model, trained with Adversarial and VGG features losses, choose the option ```weights='noise-cancel'``` when creating a RDN model.
-
-|![temple-comparison](figures/temple_comparison.png)|
-|:--:|
-| Standard vs GANS model. Click to zoom. |
-
-
-|![sandal-comparison](figures/sandal-compare.png)|
-|:--:|
-| RDN GANS artefact cancelling model (left), RDN standard PSNR driven model (right). |
--> [more detailed comparison](http://www.framecompare.com/screenshotcomparison/2ECCNNNU)
-
 
 ## Installation
 There are two ways to install the Image Super-Resolution package:
@@ -236,10 +192,7 @@ The main parameters of the architecture structure are:
 - G - number of feature maps of each convolutional layers inside the RDBs
 - G0 - number of feature maps for convolutions outside of RDBs and of each RBD output
 
-<img src="figures/RDN.png" width="600">
-<br>
 
-<img src="figures/RDB.png" width="600">
 
 source: [Residual Dense Network for Image Super-Resolution](https://arxiv.org/abs/1802.08797)
 
@@ -251,10 +204,7 @@ The main parameters of the architecture structure are:
 - G - number of feature maps of each convolutional layers inside the RDBs
 - G0 - number of feature maps for convolutions outside of RDBs and of each RBD output
 
-<img src="figures/RRDN.jpg" width="600">
-<br>
 
-<img src="figures/RRDB.png" width="600">
 
 source: [ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks](https://arxiv.org/abs/1809.00219)
 
